@@ -1,6 +1,6 @@
 const express = require('express');
-const accountRoutes = require('./routes/accountRoutes');
+const accountRouter = require('./routes/accountRouter');
 const server = express();
 server.use(express.json());
-server.use('/', accountRoutes);
+server.use('/api/accounts', accountRouter);
 module.exports = server;
